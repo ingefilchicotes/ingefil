@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="INGEFIL fabrica chicotes de clutch, acelerador y manguera de freno para motocicletas de alta cilindrada. Cuautitlán Izcalli, Tepojaco. Envíos a todo México.">
+<meta name="theme-color" content="#121316">
+<link rel="icon" href="img/favicon.png">
+<title>INGEFIL Chicotes</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+/* Concepto: taller de motos. Franja negra de marca arriba y abajo, cuerpo gris claro/carbón, naranja de llama solo en acciones y precios. */
+:root{
+  --bg:#ECEDEF; --surface:#FFFFFF; --ink:#15161A; --muted:#555961; --line:#D2D5DA;
+  --accent:#C93F08; --accent-ink:#FFFFFF; --flame:#FF6A1F;
+  --plate:#DEE1E5; --band:#121316; --band-ink:#F4F4F1; --band-muted:#B5B8BF;
+  --f-display:"Anton","Impact","Arial Narrow",sans-serif;
+  --f-body:"Barlow","Segoe UI",system-ui,sans-serif;
+  --f-label:"Barlow Condensed","Arial Narrow",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1013; --surface:#191A1F; --ink:#EFEFEA; --muted:#A6AAB3; --line:#2B2D34;
+    --accent:#FF7A33; --accent-ink:#121316; --flame:#FF6A1F;
+    --plate:#DEE1E5; --band:#0A0A0C; --band-ink:#F4F4F1; --band-muted:#B5B8BF;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1013; --surface:#191A1F; --ink:#EFEFEA; --muted:#A6AAB3; --line:#2B2D34;
+  --accent:#FF7A33; --accent-ink:#121316; --flame:#FF6A1F;
+  --plate:#DEE1E5; --band:#0A0A0C; --band-ink:#F4F4F1; --band-muted:#B5B8BF;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--band);z-index:30}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flame);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1152px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.02;margin:0;text-wrap:balance}
+p{margin:0}
+.label{font-family:var(--f-label);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.9rem;color:var(--accent)}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.35rem;border-radius:6px;font-family:var(--f-label);font-weight:700;font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn-flame{background:var(--flame);color:#121316}
+
+/* Cabecera */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--band);color:var(--band-ink);border-bottom:1px solid #26272c}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.top img{height:30px;width:auto}
+.top nav{display:flex;gap:1.5rem;align-items:center}
+.top nav a.link{font-family:var(--f-label);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:1rem;text-decoration:none;color:var(--band-muted)}
+.top nav a.link:hover{color:var(--band-ink)}
+.top .btn{min-height:40px;padding:.35rem 1rem;font-size:1rem}
+@media (max-width:760px){.top nav a.link{display:none}}
+
+/* Portada */
+.hero{background:var(--band);color:var(--band-ink);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,#B42318,var(--flame),#FFC247)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding-top:3.5rem;padding-bottom:4rem}
+.hero .copy{min-width:0;display:flex;flex-direction:column;gap:1.25rem}
+.hero .label{color:var(--flame)}
+.hero h1{font-size:clamp(2.9rem,8.4vw,6.2rem)}
+.hero h1 span{display:block;color:var(--flame)}
+.hero p.lead{font-size:1.2rem;max-width:34rem;color:#DCDDE0}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+.hero .mascot{min-width:0;display:flex;justify-content:center}
+.hero .mascot img{width:min(100%,460px);height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.55))}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:1.5rem;border-top:1px solid #2c2d33}
+.facts div{padding:1rem 1rem 0 0;min-width:0}
+.facts b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.5rem;letter-spacing:.02em;text-transform:uppercase;color:var(--band-ink)}
+.facts span{font-size:.95rem;color:var(--band-muted)}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:2.25rem;padding-bottom:3rem}
+  .hero .mascot{order:-1}
+  .hero .mascot img{width:min(70%,300px)}
+  .facts{grid-template-columns:1fr 1fr;gap:0 1rem}
+}
+
+/* Secciones */
+section.block{padding-block:4.5rem}
+.head{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2.5rem;max-width:44rem}
+.head h2{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+.head p{color:var(--muted);font-size:1.1rem}
+
+/* Productos */
+.product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem;align-items:center;padding-block:2.5rem;border-top:1px solid var(--line)}
+.product:first-of-type{border-top:0;padding-top:0}
+.product.flip .plate-col{order:2}
+.plate-col{min-width:0;display:flex;flex-direction:column;gap:.75rem}
+.plate{background:var(--plate);border-radius:10px;aspect-ratio:4/3;position:relative;overflow:hidden}
+.plate img,.thumbs img{display:block;width:100%;height:100%;object-fit:contain;-webkit-user-drag:none;-webkit-touch-callout:none;user-select:none}
+.thumbs{display:flex;gap:.6rem;flex-wrap:wrap}
+.thumbs button{width:76px;height:57px;padding:0;overflow:hidden;background:var(--plate);border:2px solid transparent;border-radius:6px;cursor:pointer;display:block}
+.thumbs button[aria-pressed="true"]{border-color:var(--accent)}
+.info{min-width:0;display:flex;flex-direction:column;gap:1.1rem}
+.info h3{font-size:clamp(2rem,4.6vw,3rem)}
+.info p{color:var(--muted)}
+.feats{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem}
+.feats li{padding-left:1.4rem;position:relative}
+.feats li::before{content:"";position:absolute;left:0;top:.62em;width:.7rem;height:3px;background:var(--flame)}
+.price{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.price small{font-family:var(--f-label);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.price b{font-family:var(--f-display);font-weight:400;font-size:2.6rem;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.price span{color:var(--muted)}
+.swatches{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.swatches i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(128,128,128,.55);display:inline-block}
+.swatches em{font-style:normal;font-size:.9rem;color:var(--muted);margin-left:.25rem}
+.kit{background:var(--band);color:var(--band-ink);border-radius:12px;padding:2rem;margin-top:1.5rem;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2rem;align-items:center;border-top:0}
+.kit .plate{aspect-ratio:3/4;max-width:420px;margin-inline:auto;width:100%}
+.kit .info p,.kit .feats{color:#D4D6DA}
+.kit .price b{color:var(--flame)}
+.kit .label{color:var(--flame)}
+@media (max-width:820px){
+  .product,.kit{grid-template-columns:1fr;gap:1.25rem}
+  .product.flip .plate-col{order:0}
+  .kit{padding:1.25rem}
+}
+
+/* Compatibilidad */
+.compat{background:var(--surface);border-block:1px solid var(--line)}
+.compat-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem}
+.brands{display:flex;flex-wrap:wrap;gap:.6rem;margin:0;padding:0;list-style:none}
+.brands li{font-family:var(--f-display);text-transform:uppercase;font-size:1.35rem;letter-spacing:.03em;padding:.55rem 1rem;border:2px solid var(--ink);border-radius:6px}
+.checks{display:grid;gap:.9rem;margin:0;padding:0;list-style:none}
+.checks li{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:baseline;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.checks b{font-family:var(--f-label);font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;min-width:7.5rem}
+.note{margin-top:1.5rem;padding:1.1rem 1.25rem;border-left:4px solid var(--flame);background:var(--bg);color:var(--muted)}
+@media (max-width:820px){.compat-grid{grid-template-columns:1fr;gap:2rem}}
+
+/* Garantía */
+.warranty{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.big{font-family:var(--f-display);font-size:clamp(5rem,16vw,9rem);line-height:.9;color:var(--accent)}
+.big small{display:block;font-size:clamp(1.8rem,5vw,2.8rem);color:var(--ink)}
+.no-cover{margin:0;padding:0;list-style:none;display:grid;gap:.5rem}
+.no-cover li{padding:.6rem 0;border-bottom:1px solid var(--line)}
+.warranty h3{font-size:1.5rem;margin-bottom:.8rem}
+.warranty .col{display:flex;flex-direction:column;gap:1.5rem;min-width:0}
+@media (max-width:820px){.warranty{grid-template-columns:1fr;gap:1.5rem}}
+
+/* Opiniones */
+.reviews{display:grid;grid-template-columns:1.2fr 1fr;gap:1.25rem;align-items:start}
+.rev{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;min-width:0}
+.rev.long{grid-row:span 2}
+.rev .stars{color:var(--flame);letter-spacing:.2em;font-size:1.15rem;line-height:1}
+.rev .text{display:flex;flex-direction:column;gap:.8rem}
+.rev .text p{color:var(--ink)}
+.rev cite{font-style:normal;font-family:var(--f-label);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;color:var(--muted)}
+.rev-cta{margin-top:1.5rem}
+@media (max-width:820px){.reviews{grid-template-columns:1fr}.rev.long{grid-row:auto}}
+
+/* Cómo comprar */
+.buy{background:var(--surface);border-block:1px solid var(--line)}
+.steps{counter-reset:s;list-style:none;margin:0 0 2.5rem;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.steps li{counter-increment:s;padding-top:1rem;border-top:4px solid var(--ink);min-width:0}
+.steps li::before{content:counter(s);display:block;font-family:var(--f-display);font-size:2.4rem;line-height:1;color:var(--accent);margin-bottom:.5rem}
+.steps b{display:block;font-family:var(--f-label);text-transform:uppercase;letter-spacing:.08em;font-size:1.1rem;margin-bottom:.25rem}
+.steps span{color:var(--muted);font-size:.98rem}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.pay ul{margin:.6rem 0 0;padding:0;list-style:none;display:grid;gap:.35rem}
+.pay h3{font-size:1.5rem}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem}
+.tags span{font-family:var(--f-label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.45rem .9rem;background:var(--ink);color:var(--bg);border-radius:4px}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}.pay{grid-template-columns:1fr}}
+
+/* Contacto */
+.contact{background:var(--band);color:var(--band-ink);position:relative}
+.contact .wrap{padding-block:4.5rem 3rem}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+.contact h2{font-size:clamp(2.4rem,6vw,4rem)}
+.contact .label{color:var(--flame)}
+.contact .col{display:flex;flex-direction:column;gap:1.25rem;min-width:0}
+.contact p{color:#D4D6DA}
+.num{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem}
+.num strong{font-family:var(--f-display);font-weight:400;font-size:2.4rem;letter-spacing:.03em;font-variant-numeric:tabular-nums;user-select:all}
+.copy-btn{background:transparent;color:var(--band-ink);border:2px solid #4a4c55;border-radius:6px;padding:.4rem .9rem;font-family:var(--f-label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.95rem;cursor:pointer}
+.copy-btn:hover{border-color:var(--flame)}
+.social{display:grid;gap:.6rem;margin:0;padding:0;list-style:none}
+.social a{display:flex;justify-content:space-between;align-items:center;gap:1rem;text-decoration:none;padding:.9rem 1.1rem;border:1px solid #33353c;border-radius:8px;transition:border-color .15s ease,background .15s ease}
+.social a:hover{border-color:var(--flame);background:#17181c}
+.social b{font-family:var(--f-label);font-size:1.15rem;letter-spacing:.1em;text-transform:uppercase}
+.social span{color:var(--band-muted);font-size:.95rem;text-align:right;overflow-wrap:anywhere}
+.review{padding:1.4rem;border:2px solid var(--flame);border-radius:10px;display:flex;flex-direction:column;gap:.8rem}
+.review h3{font-size:1.7rem}
+.foot{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #2c2d33;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;color:var(--band-muted);font-size:.95rem}
+.foot img{height:26px;width:auto}
+.contact::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#B42318,var(--flame),#FFC247)}
+@media (max-width:820px){.contact .grid{grid-template-columns:1fr;gap:2rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.social a{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="#inicio" aria-label="INGEFIL, inicio"><img src="img/wordmark-light.webp" alt="INGEFIL" width="126" height="30"></a>
+    <nav aria-label="Principal">
+      <a class="link" href="#productos">Productos</a>
+      <a class="link" href="#garantia">Garantía</a>
+      <a class="link" href="#comprar">Cómo comprar</a>
+      <a class="btn btn-flame" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20un%20producto%20INGEFIL." target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <span class="label">Cuautitlán Izcalli, Tepojaco</span>
+        <h1>Hechos para rodar.<span>Hechos para durar.</span></h1>
+        <p class="lead">Fabricamos chicotes de clutch, acelerador y regreso, y manguera de freno para motocicletas de alta cilindrada. Cada pieza se hace según tu marca y modelo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20un%20producto%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a class="btn btn-ghost" href="#productos">Ver productos</a>
+        </div>
+        <div class="facts">
+          <div><b>Desde 2018</b><span>Empresa mexicana</span></div>
+          <div><b>2 meses</b><span>Garantía por defecto de fabricación</span></div>
+          <div><b>Todo México</b><span>Envíos</span></div>
+          <div><b>Mayoreo</b><span>y menudeo</span></div>
+        </div>
+      </div>
+      <div class="mascot">
+        <img src="img/mascota.webp" alt="Víbora de fuego enrollada en un manubrio, mascota de INGEFIL" width="861" height="900">
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="nosotros" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="head" style="margin-bottom:0">
+        <span class="label">Quiénes somos</span>
+        <h2>Empresa mexicana, desde 2018</h2>
+        <p>INGEFIL fabrica chicotes para motocicletas de alta cilindrada, para quienes exigen precisión, resistencia y disponibilidad inmediata. Trabajamos con materiales de origen nacional y cuidamos el ajuste y el desempeño en condiciones reales de uso.</p>
+        <p>INGEFIL nace de la colaboración de dos socios y copropietarios, entre ellos Hugo Martínez.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="productos">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Catálogo 2026</span>
+        <h2>Lo que fabricamos</h2>
+        <p>Materiales de origen nacional y ajuste según el modelo de tu moto. Los precios son unitarios y el precio final se confirma al cotizar.</p>
+      </div>
+
+      <article class="product" data-gallery>
+        <div class="plate-col">
+          <div class="plate"><img class="main" src="img/clutch-negro.webp" alt="Chicote de clutch negro con terminal de ojillo" width="722" height="514"></div>
+          <div class="thumbs" role="group" aria-label="Fotos del chicote de clutch">
+            <button type="button" aria-pressed="true" data-src="img/clutch-negro.webp" data-alt="Chicote de clutch negro con terminal de ojillo"><img src="img/clutch-negro.webp" alt="Negro"></button>
+            <button type="button" aria-pressed="false" data-src="img/clutch-rojo.webp" data-alt="Chicote de clutch rojo con protector de hule"><img src="img/clutch-rojo.webp" alt="Rojo"></button>
+            <button type="button" aria-pressed="false" data-src="img/clutch-plata.webp" data-alt="Chicote de clutch con funda metálica plateada"><img src="img/clutch-plata.webp" alt="Plateado"></button>
+            <button type="button" aria-pressed="false" data-src="img/clutch-cromo.webp" data-alt="Chicote de clutch negro con codo cromado"><img src="img/clutch-cromo.webp" alt="Con codo cromado"></button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Chicote de clutch</h3>
+          <p>Accionamiento preciso, suave y confiable para motocicletas de alta cilindrada y condiciones reales de uso.</p>
+          <ul class="feats">
+            <li>Alta resistencia al desgaste</li>
+            <li>Ajuste según modelo</li>
+            <li>Uso urbano y de trabajo</li>
+          </ul>
+          <div class="price"><small>Desde</small><b>$1,000 MXN</b><span>precio unitario</span></div>
+          <div class="swatches" aria-label="Colores de referencia"><i style="background:#E0364C"></i><i style="background:#1C1C1E"></i><i style="background:#B3B3B3"></i><i style="background:#0BC2E3"></i><i style="background:#FFFFFF"></i><em>Colores de referencia</em></div>
+          <div><a class="btn btn-primary" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20un%20chicote%20de%20clutch%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Cotizar chicote de clutch</a></div>
+        </div>
+      </article>
+
+      <article class="product flip" data-gallery>
+        <div class="plate-col">
+          <div class="plate"><img class="main" src="img/acel-negro.webp" alt="Chicote de acelerador y regreso negro" width="466" height="494"></div>
+          <div class="thumbs" role="group" aria-label="Fotos del chicote de acelerador y regreso">
+            <button type="button" aria-pressed="true" data-src="img/acel-negro.webp" data-alt="Chicote de acelerador y regreso negro"><img src="img/acel-negro.webp" alt="Negro"></button>
+            <button type="button" aria-pressed="false" data-src="img/acel-azul.webp" data-alt="Chicote de acelerador y regreso azul oscuro"><img src="img/acel-azul.webp" alt="Azul oscuro"></button>
+            <button type="button" aria-pressed="false" data-src="img/acel-acero.webp" data-alt="Chicote de acelerador y regreso con funda acero"><img src="img/acel-acero.webp" alt="Acero"></button>
+            <button type="button" aria-pressed="false" data-src="img/acel-tubos.webp" data-alt="Codos cromados del chicote de acelerador"><img src="img/acel-tubos.webp" alt="Codos cromados"></button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Chicote de acelerador y regreso</h3>
+          <p>Control preciso y respuesta inmediata, con retorno controlado para una conducción fluida y segura.</p>
+          <ul class="feats">
+            <li>Alta resistencia al desgaste</li>
+            <li>Ajuste según modelo</li>
+            <li>Uso urbano y de trabajo</li>
+          </ul>
+          <div class="price"><small>Desde</small><b>$1,000 MXN</b><span>precio unitario</span></div>
+          <div class="swatches" aria-label="Colores de referencia"><i style="background:#E0364C"></i><i style="background:#1C1C1E"></i><i style="background:#B3B3B3"></i><i style="background:#0BC2E3"></i><i style="background:#FFFFFF"></i><em>Colores de referencia</em></div>
+          <div><a class="btn btn-primary" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20un%20chicote%20de%20acelerador%20y%20regreso%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Cotizar acelerador y regreso</a></div>
+        </div>
+      </article>
+
+      <article class="product" data-gallery>
+        <div class="plate-col">
+          <div class="plate"><img class="main" src="img/freno-plata.webp" alt="Manguera de freno de malla trenzada con conexiones cromadas" width="660" height="644"></div>
+          <div class="thumbs" role="group" aria-label="Fotos de la manguera de freno">
+            <button type="button" aria-pressed="true" data-src="img/freno-plata.webp" data-alt="Manguera de freno de malla trenzada con conexiones cromadas"><img src="img/freno-plata.webp" alt="Malla plateada"></button>
+            <button type="button" aria-pressed="false" data-src="img/freno-malla.webp" data-alt="Manguera de freno con malla trenzada gris"><img src="img/freno-malla.webp" alt="Malla gris"></button>
+            <button type="button" aria-pressed="false" data-src="img/freno-oscuro.webp" data-alt="Manguera de freno con malla oscura"><img src="img/freno-oscuro.webp" alt="Malla oscura"></button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Manguera de freno</h3>
+          <p>Para frenado hidráulico en motocicletas de alta cilindrada. Mantiene la presión constante y reduce la expansión del conducto bajo carga, para una respuesta más directa.</p>
+          <ul class="feats">
+            <li>Conducción de presión uniforme</li>
+            <li>Menor expansión bajo carga</li>
+            <li>Alta resistencia mecánica y térmica</li>
+            <li>Mejora la sensación y el control de frenado</li>
+          </ul>
+          <div class="price"><small>Desde</small><b>$1,000 MXN</b><span>precio unitario</span></div>
+          <div class="swatches" aria-label="Colores de referencia"><i style="background:#E0364C"></i><i style="background:#1C1C1E"></i><i style="background:#B3B3B3"></i><i style="background:#0BC2E3"></i><i style="background:#FFFFFF"></i><em>Colores de referencia</em></div>
+          <div><a class="btn btn-primary" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20una%20manguera%20de%20freno%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Cotizar manguera de freno</a></div>
+        </div>
+      </article>
+
+      <article class="product kit">
+        <div class="plate-col">
+          <div class="plate"><img src="img/kit-rojo.webp" alt="Kit INGEFIL en rojo: chicote de clutch, acelerador y manguera de freno" width="320" height="820"></div>
+        </div>
+        <div class="info">
+          <span class="label">Todo en un paquete</span>
+          <h3>Kit INGEFIL</h3>
+          <p>Los componentes esenciales de control y frenado, fabricados o seleccionados para la marca y el modelo de tu moto. Tiene precio preferencial frente a comprar las piezas por separado.</p>
+          <ul class="feats">
+            <li>Chicote de clutch</li>
+            <li>Chicote de acelerador y regreso</li>
+            <li>Manguera de freno</li>
+            <li>Compatibilidad validada por marca y modelo</li>
+          </ul>
+          <div><a class="btn btn-flame" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20el%20Kit%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Cotizar el kit</a></div>
+        </div>
+      </article>
+      <p class="note">Los colores mostrados son de referencia. La disponibilidad depende del proveedor y de las existencias, y el color final se confirma al cotizar.</p>
+    </div>
+  </section>
+
+  <section class="block compat" id="compatibilidad">
+    <div class="wrap compat-grid">
+      <div>
+        <div class="head" style="margin-bottom:1.5rem">
+          <span class="label">Compatibilidad</span>
+          <h2>Cada pieza, para tu moto</h2>
+          <p>Trabajamos solo con motocicletas de alta cilindrada. No hacemos aplicaciones genéricas: cada chicote y manguera se fabrica o se selecciona para una marca y un modelo específicos.</p>
+        </div>
+        <ul class="brands" aria-label="Marcas">
+          <li>Harley-Davidson</li><li>Honda</li><li>Yamaha</li><li>Kawasaki</li><li>Indian</li><li>Suzuki</li>
+        </ul>
+        <p class="note">¿Tu marca o modelo no está en la lista? Si tu moto es de alta cilindrada, podemos fabricar la pieza. Necesitamos la muestra física y las medidas, y la viabilidad se confirma al cotizar.</p>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:1rem">La compatibilidad depende de</p>
+        <ul class="checks">
+          <li><b>Marca</b><span>Fabricante de tu motocicleta.</span></li>
+          <li><b>Modelo</b><span>Y año, para el ajuste correcto.</span></li>
+          <li><b>Cilindrada</b><span>Solo motos de alta cilindrada.</span></li>
+          <li><b>Sistema</b><span>Clutch, acelerador o freno.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="garantia">
+    <div class="wrap warranty">
+      <div>
+        <span class="label">Garantía</span>
+        <div class="big">2 <small>meses</small></div>
+        <p style="color:var(--muted);margin-top:1rem">A partir de la fecha de entrega, por defectos de fabricación. Si procede, cambiamos el producto sin costo, previa revisión.</p>
+      </div>
+      <div class="col">
+        <div>
+          <h3>Cómo se revisa</h3>
+          <p style="color:var(--muted)">Podemos pedirte la pieza para evaluarla. La garantía se valida al confirmar que la falla es un defecto de fabricación y no una condición externa o de manejo.</p>
+        </div>
+        <div>
+          <h3>La garantía no aplica por</h3>
+          <ul class="no-cover">
+            <li>Instalación incorrecta</li>
+            <li>Uso indebido</li>
+            <li>Mala aplicación</li>
+            <li>Modificaciones al producto</li>
+            <li>Daños visibles por sobrecalentamiento, fricción o alteración de la funda</li>
+          </ul>
+        </div>
+        <p style="color:var(--muted)">Para asegurar el funcionamiento correcto, recomendamos instalación profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="opiniones">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Opiniones en Google</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="reviews">
+        <figure class="rev long">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote class="text" style="margin:0">
+            <p>La atención que brindan es increíble por que son muy responsables para el día y la hora en que se comprometen en entregarlo.</p>
+            <p>Mí máquina es de Alta Gama así que los chicotes que necesita deben ser importados de Estados Unidos pero con Ingefil me olvidé de este proceso por que ellos me hacen los Chicotes con una excelente calidad, resistencia así como en durabilidad como de agencia.</p>
+            <p>Yo como buen Rider a todos mis hermanos Riders les recomiendo que manden a hacer aquí en Ingefil sus chicotes por que nuestras máquinas merecen lo mejor por nuestra seguridad así como nuestras vidas así que buenas rutas.</p>
+            <p>Ingefil gracias por todas sus atenciones y la gran calidad que nos brindan.</p>
+          </blockquote>
+          <figcaption><cite>Cliente, opinión en Google</cite></figcaption>
+        </figure>
+        <figure class="rev">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote class="text" style="margin:0">
+            <p>Buena comunicación y atención, la línea de freno que mandé a hacer no quedó a la primera por diferencias con la conexión original pero a pesar de esto me la rehicieron sin costo extra, es válida la garantía 100%</p>
+          </blockquote>
+          <figcaption><cite>Cliente, opinión en Google</cite></figcaption>
+        </figure>
+        <figure class="rev">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote class="text" style="margin:0">
+            <p>Un excelente servicio y trabajo y soporte técnico ante mis dudas, repararon el Clutch de mi Harley M8 y quedó trabajando al 100, y queda pendiente otro proyecto, 100% recomendable. Saludos</p>
+          </blockquote>
+          <figcaption><cite>Cliente, opinión en Google</cite></figcaption>
+        </figure>
+      </div>
+      <div class="rev-cta"><a class="btn btn-primary" href="https://g.page/r/CSjvbNbeBb35EBE/review" target="_blank" rel="noopener">Déjanos tu opinión</a></div>
+    </div>
+  </section>
+
+  <section class="block buy" id="comprar">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Cómo comprar</span>
+        <h2>Compra directa, por WhatsApp</h2>
+        <p>Cada pedido es personalizado, así que todo el proceso se hace por WhatsApp. No usamos plataformas externas de pago.</p>
+      </div>
+      <ol class="steps">
+        <li><b>Escríbenos</b><span>Dinos marca, modelo y qué pieza necesitas.</span></li>
+        <li><b>Cotizamos</b><span>Confirmamos compatibilidad, disponibilidad y color.</span></li>
+        <li><b>Anticipo 50%</b><span>Por depósito o transferencia a la cuenta que te damos al cotizar.</span></li>
+        <li><b>Comprobante</b><span>Envíanos tu comprobante y los datos de envío.</span></li>
+        <li><b>Fabricamos</b><span>Preparamos tu pedido y lo enviamos a cualquier parte de México.</span></li>
+      </ol>
+      <div class="pay">
+        <div>
+          <h3>Formas de pago</h3>
+          <ul>
+            <li>Transferencia bancaria</li>
+            <li>Depósito en OXXO</li>
+            <li>Tarjeta de débito</li>
+            <li>Tarjeta de crédito. En pagos a meses puede aplicar un incremento en el precio, según la modalidad.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Reputación</h3>
+          <p style="color:var(--muted);margin:.6rem 0 1rem">INGEFIL tiene el respaldo de clientes y comunidades motociclistas. Puedes revisar nuestras redes o preguntar en grupos especializados.</p>
+          <div class="tags"><span>Envíos a todo México</span><span>Mayoreo y menudeo</span><span>Pago con tarjeta</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contacto">
+  <div class="wrap">
+    <div class="grid">
+      <div class="col">
+        <span class="label">Atención y ventas</span>
+        <h2>Cuéntanos qué moto tienes</h2>
+        <p>Fabricación y distribución de chicotes para motocicletas de alta cilindrada. Escríbenos por WhatsApp con la marca, el modelo y la pieza que buscas.</p>
+        <div class="num">
+          <strong id="wa-num">55 1866 4564</strong>
+          <button type="button" class="copy-btn" id="copy-num">Copiar número</button>
+        </div>
+        <div><a class="btn btn-flame" href="https://wa.me/525518664564?text=Hola%2C%20quiero%20cotizar%20un%20producto%20INGEFIL.%20Mi%20moto%20es%3A%20" target="_blank" rel="noopener">Abrir WhatsApp</a></div>
+        <p>Correo: <a href="mailto:ingefilmotos@gmail.com" style="color:#fff;font-weight:600;user-select:all">ingefilmotos@gmail.com</a></p>
+        <p style="font-family:var(--f-label);letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#fff">Cuautitlán Izcalli, Tepojaco</p>
+      </div>
+      <div class="col">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/share/1KpEtqXbXs/" target="_blank" rel="noopener"><b>Facebook</b><span>Chicotes para moto Ingefil</span></a></li>
+          <li><a href="https://www.instagram.com/ingefilchicotes/" target="_blank" rel="noopener"><b>Instagram</b><span>@ingefilchicotes</span></a></li>
+          <li><a href="https://www.tiktok.com/@ingefilmx" target="_blank" rel="noopener"><b>TikTok</b><span>@ingefilmx</span></a></li>
+        </ul>
+        <div class="review">
+          <h3>¿Ya compraste con nosotros?</h3>
+          <p>Tu opinión ayuda a otros motociclistas a elegir. Déjala en nuestro perfil de Google.</p>
+          <div><a class="btn btn-primary" href="https://g.page/r/CSjvbNbeBb35EBE/review" target="_blank" rel="noopener">Déjanos tu opinión</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <img src="img/wordmark-light.webp" alt="INGEFIL" width="109" height="26">
+      <span>Hechos para rodar. Hechos para durar.</span>
+      <span>2026 INGEFIL</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-gallery]').forEach(function(g){
+    var main=g.querySelector('img.main');
+    var btns=g.querySelectorAll('.thumbs button');
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        main.src=b.getAttribute('data-src');
+        main.alt=b.getAttribute('data-alt');
+        btns.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
+      });
+    });
+  });
+  var cb=document.getElementById('copy-num');
+  if(cb){
+    cb.addEventListener('click',function(){
+      var el=document.getElementById('wa-num');
+      var txt='55 1866 4564';
+      function done(ok){cb.textContent=ok?'Número copiado':'Selecciona el número';setTimeout(function(){cb.textContent='Copiar número';},2200);}
+      try{
+        navigator.clipboard.writeText(txt).then(function(){done(true);},function(){
+          var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);done(false);
+        });
+      }catch(e){
+        var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);done(false);
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
